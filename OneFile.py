@@ -15,5 +15,5 @@ sort_textfile = dict(sorted(textfile.items()))
 with open('result.txt', 'w', encoding="utf8") as f:
     for key, value in sort_textfile.items():
         name = value[:value.find(" | ")]
-        age = value[value.find(" | ") + 3:].replace(" | ", "")
-        f.write(f'{name}\n{key}\n{age}\n')
+        text = value[value.find(" | ") + 3:].replace(" | ", "")
+        f.write(f'{name}\n{key}\n{text}\n')
